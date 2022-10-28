@@ -1,0 +1,55 @@
+{
+    "kind": "youtube#channelListResponse",
+    "etag": "Tst83tZrJ7R0LhUKgWSZe32W3tg",
+    "pageInfo": {
+        "totalResults": 1,
+        "resultsPerPage": 5
+    },
+    "items": [
+        {
+            "kind": "youtube#channel",
+            "etag": "J8sJdZ9IvIu14Wktouo5aO1AdCM",
+            "id": "UCXURHJRGr4-EB3l87kcbElw",
+            "snippet": {
+                "title": "NCT DREAM",
+                "description": "NCT DREAM The 2nd Album Repackage 〖Beatbox〗\n\nWelcome to NCT DREAM Official Youtube Channel",
+                "customUrl": "@nctdream",
+                "publishedAt": "2017-06-07T05:50:32Z",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://yt3.ggpht.com/IXVPO4XECRxK_PKaLS_uJWGrfrDp8F-nYtmSQJ_Yrtq32q2VzzbFMarl4fUvQWOnk2f0lbUEHg=s88-c-k-c0x00ffffff-no-nd-rj",
+                        "width": 88,
+                        "height": 88
+                    },
+                    "medium": {
+                        "url": "https://yt3.ggpht.com/IXVPO4XECRxK_PKaLS_uJWGrfrDp8F-nYtmSQJ_Yrtq32q2VzzbFMarl4fUvQWOnk2f0lbUEHg=s240-c-k-c0x00ffffff-no-nd-rj",
+                        "width": 240,
+                        "height": 240
+                    },
+                    "high": {
+                        "url": "https://yt3.ggpht.com/IXVPO4XECRxK_PKaLS_uJWGrfrDp8F-nYtmSQJ_Yrtq32q2VzzbFMarl4fUvQWOnk2f0lbUEHg=s800-c-k-c0x00ffffff-no-nd-rj",
+                        "width": 800,
+                        "height": 800
+                    }
+                },
+                "localized": {
+                    "title": "NCT DREAM",
+                    "description": "NCT DREAM The 2nd Album Repackage 〖Beatbox〗\n\nWelcome to NCT DREAM Official Youtube Channel"
+                },
+                "country": "KR"
+            },
+            "contentDetails": {
+                "relatedPlaylists": {
+                    "likes": "",
+                    "uploads": "UUXURHJRGr4-EB3l87kcbElw"
+                }
+            },
+            "statistics": {
+                "viewCount": "866152013",
+                "subscriberCount": "5290000",
+                "hiddenSubscriberCount": false,
+                "videoCount": "425"
+            }
+        }
+    ]
+}
