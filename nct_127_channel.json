@@ -1,6 +1,6 @@
 {
     "kind": "youtube#channelListResponse",
-    "etag": "z0Yo9tks06-ORumrhjVDfcRue2E",
+    "etag": "q_cjXhdvbD3SyKgViyQDN_B6efI",
     "pageInfo": {
         "totalResults": 1,
         "resultsPerPage": 5
@@ -8,7 +8,7 @@
     "items": [
         {
             "kind": "youtube#channel",
-            "etag": "ZLTuv6WXGQL0AWhEm-tyvX5pHOE",
+            "etag": "xZZFWgSfYKAj9jh9vEpKqRC-BjU",
             "id": "UCk2E0dbAyEJWnrN2bbQOcbg",
             "snippet": {
                 "title": "NCT 127",
@@ -45,10 +45,10 @@
                 }
             },
             "statistics": {
-                "viewCount": "768203111",
-                "subscriberCount": "4910000",
+                "viewCount": "792772143",
+                "subscriberCount": "4960000",
                 "hiddenSubscriberCount": false,
-                "videoCount": "466"
+                "videoCount": "472"
             }
         }
     ]

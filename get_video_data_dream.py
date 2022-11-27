@@ -27,10 +27,9 @@ def get_channel_info(youtube,channel_id) :
 
     with open('nct_dream_channel.json','w',encoding='utf-8') as f:
         json.dump(response,f,ensure_ascii=False,indent=4)
-    
     return channel_name,num_subscribers,num_vid,total_views,playlist_id
 
-# Retrieve a list of video id's of the channel - 100 vids
+# Retrieve a list of video id's of the channel - all vids
 def get_video_id_list(youtube,playlist_id):
     request = youtube.playlistItems().list(
         part = 'contentDetails',
@@ -42,22 +41,24 @@ def get_video_id_list(youtube,playlist_id):
     vid_id_list = []
     for i in range(len(response['items'])):
         vid_id_list.append(response['items'][i]['contentDetails']['videoId'])
-    
-    next_page_token = response.get('nextPageToken')
-    request = youtube.playlistItems().list(
-            part='contentDetails',
-            playlistId = playlist_id,
-            maxResults = 50,
-            pageToken = next_page_token)
-    response = request.execute()
-    for i in range(len(response['items'])):
-        vid_id_list.append(response['items'][i]['contentDetails']['videoId'])
+
+    while (response.get('nextPageToken')):
+        next_page_token = response.get('nextPageToken')
+        request = youtube.playlistItems().list(
+                part='contentDetails',
+                playlistId = playlist_id,
+                maxResults = 50,
+                pageToken = next_page_token)
+        response = request.execute()
+        for i in range(len(response['items'])):
+            vid_id_list.append(response['items'][i]['contentDetails']['videoId'])
 
     return vid_id_list
     
 # Retrieve the needed statistics of each video
 def get_vid_stats(youtube, vid_id_list):
     vid_stats = []
+
     for i in range(0, len(vid_id_list),50):
         request = youtube.videos().list(
                     part='snippet,statistics,contentDetails',
@@ -78,6 +79,7 @@ def get_vid_stats(youtube, vid_id_list):
 # Requesting 50 at once - 0.38 seconds
 # Requesting data individually - 8.88 seconds
 # The cost of requesting is long, so less requests the better
+
 
 # Rerefence : https://www.geeksforgeeks.org/find-all-the-numbers-in-a-string-using-regular-expression-in-python/
 # Function to change duration of video from iso8601 to seconds
@@ -113,9 +115,7 @@ def main():
 
     # Delete rows with "#Shorts" in title
     df = df.drop(df[df.title.apply(isShorts)==True].index)
-    df = df.drop('title',axis=1)
-    df = df.drop(df.index[70:])
-    df.to_csv("nct_dream_data.csv",index=False)
+    df.to_csv("nct_dream_data.csv",index=False,encoding='utf-8')
     
 if __name__ == "__main__":
     main()
