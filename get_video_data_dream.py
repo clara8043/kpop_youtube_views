@@ -115,7 +115,7 @@ def main():
 
     # Delete rows with "#Shorts" in title
     df = df.drop(df[df.title.apply(isShorts)==True].index)
-    df.to_csv("nct_dream_data.csv",index=False,encoding='utf-8')
+    df.to_csv("nct_dream_data.csv",index=False,encoding='utf-8-sig')
     
 if __name__ == "__main__":
     main()
