@@ -30,7 +30,10 @@ def get_channel_info(youtube,channel_id) :
     total_views = res_items['statistics']['viewCount']
     playlist_id = res_items['contentDetails']['relatedPlaylists']['uploads']
 
-    json_filename = 'data/latest_nct_dream_channel_'+ today + '.json'
+    # Name file with current date
+    json_filename = '/data/latest_nct_dream_channel_'+ today + '.json'
+    # Make directory if doesn't exist
+    os.makedirs(os.path.dirname(json_filename),exist_ok=True)
     with open(json_filename,'w',encoding='utf-8') as f:
         json.dump(response,f,ensure_ascii=False,indent=4)
     return channel_name,num_subscribers,num_vid,total_views,playlist_id
@@ -121,7 +124,7 @@ def main():
 
     # Delete rows with "#Shorts" in title
     df = df.drop(df[df.title.apply(isShorts)==True].index)
-    csv_filename = "data/latest_youtube_data_" + today + ".csv"
+    csv_filename = "/data/latest_youtube_data_" + today + ".csv"
     df.to_csv(csv_filename,index=False,encoding='utf-8-sig')
     
 if __name__ == "__main__":
