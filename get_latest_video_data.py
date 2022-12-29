@@ -16,7 +16,7 @@ channel_id = os.environ['CHANNEL_ID']
 
 youtube = googleapiclient.discovery.build('youtube','v3',developerKey = api_key)
 
-today = date.today()
+today = str(date.today())
 #Get channel information and return each values
 def get_channel_info(youtube,channel_id) :
     request = youtube.channels().list(
