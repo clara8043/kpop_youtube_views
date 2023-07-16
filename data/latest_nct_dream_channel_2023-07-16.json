@@ -1,0 +1,55 @@
+{
+    "kind": "youtube#channelListResponse",
+    "etag": "YIUqdbTqnixIV3J0gMZonMqBNzY",
+    "pageInfo": {
+        "totalResults": 1,
+        "resultsPerPage": 5
+    },
+    "items": [
+        {
+            "kind": "youtube#channel",
+            "etag": "VDx_wY626U0LwY18JE01rkr3K0k",
+            "id": "UCXURHJRGr4-EB3l87kcbElw",
+            "snippet": {
+                "title": "NCT DREAM",
+                "description": "【ISTJ - The 3rd Album】 ➫ 2023.07.17 6PM (KST)\n\nWelcome to NCT DREAM Official Youtube Channel",
+                "customUrl": "@nctdream",
+                "publishedAt": "2017-06-07T05:50:32Z",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://yt3.ggpht.com/8RHz1p1aZFxia6aNoo0rAIciDbMTbW2nQmEdJXU6BCmQLV9771JGk3llA95arSYJnLI4Qojo=s88-c-k-c0x00ffffff-no-nd-rj",
+                        "width": 88,
+                        "height": 88
+                    },
+                    "medium": {
+                        "url": "https://yt3.ggpht.com/8RHz1p1aZFxia6aNoo0rAIciDbMTbW2nQmEdJXU6BCmQLV9771JGk3llA95arSYJnLI4Qojo=s240-c-k-c0x00ffffff-no-nd-rj",
+                        "width": 240,
+                        "height": 240
+                    },
+                    "high": {
+                        "url": "https://yt3.ggpht.com/8RHz1p1aZFxia6aNoo0rAIciDbMTbW2nQmEdJXU6BCmQLV9771JGk3llA95arSYJnLI4Qojo=s800-c-k-c0x00ffffff-no-nd-rj",
+                        "width": 800,
+                        "height": 800
+                    }
+                },
+                "localized": {
+                    "title": "NCT DREAM",
+                    "description": "【ISTJ - The 3rd Album】 ➫ 2023.07.17 6PM (KST)\n\nWelcome to NCT DREAM Official Youtube Channel"
+                },
+                "country": "KR"
+            },
+            "contentDetails": {
+                "relatedPlaylists": {
+                    "likes": "",
+                    "uploads": "UUXURHJRGr4-EB3l87kcbElw"
+                }
+            },
+            "statistics": {
+                "viewCount": "1333474283",
+                "subscriberCount": "6280000",
+                "hiddenSubscriberCount": false,
+                "videoCount": "585"
+            }
+        }
+    ]
+}
